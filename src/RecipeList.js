@@ -10,7 +10,11 @@ export default function RecipeList({ recipe }) {
           window.open(recipe["recipe"]["url"]);
         }}
       >
-        <img className="recipeList__img" src={recipe["recipe"]["image"]} />
+        <img
+          className="recipeList__img"
+          src={recipe["recipe"]["image"]}
+          alt="Recipe img"
+        />
         <h2 className="recipeList__name">{recipe["recipe"]["label"]}</h2>
         <section className="recipeList__ingredientLines">
           <p style={{ fontWeight: "bold", margin: "1rem 0" }}>Ingredients:</p>
