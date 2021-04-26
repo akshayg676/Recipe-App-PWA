@@ -26,11 +26,11 @@ self.addEventListener("activate", (e) => {
   const cacheWhiteList = [];
   cacheWhiteList.push(CACHE_NAME);
 
-  e.waitUntile(
+  e.waitUntil(
     caches.keys().then((cachesNames) =>
       Promise.all(
         cachesNames.map((cacheName) => {
-          if (!cacheWhiteList.includes(cachesName)) {
+          if (!cacheWhiteList.includes(cacheName)) {
             return caches.delete(cacheName);
           }
         })
